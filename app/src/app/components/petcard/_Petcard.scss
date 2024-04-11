@@ -1,11 +1,25 @@
-.image-container{
-    width: 250px;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
+.card-content-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    img{
+    justify-content: space-between;
+    width: 100%;
+    
 
+}
+span{
+    & > *{
+        width: 1.3em;
+        height: 1.3em;
+        color: white;
+    }
+}
+.card{
+    
+    transition: all .4s ease-out;
+    &:hover{
+        box-shadow: rgba(17, 12, 46, 0.1) 0px 48px 100px 0px;
+    }
+    .button{
+        transition: all .4s cubic-bezier(0.86, 0, 0.07, 1);
     }
 }
