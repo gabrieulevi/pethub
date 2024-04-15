@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "pethub_api",
+    "password": "ohgeeB6u",
+    "database": "pethub",
+    "host": "187.103.0.131",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
