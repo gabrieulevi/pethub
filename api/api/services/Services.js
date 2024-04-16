@@ -10,7 +10,7 @@ class Services {
     }
 
     async pegaUmRegistro(id){
-
+        return database[this.nomeDoModelo].findOne({where: {id: id}})
     }
 
     async atualizaRegistro(dadosRegistro, where, transacao = {}){

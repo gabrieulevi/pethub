@@ -1,11 +1,10 @@
 const Services = require("./Services")
 const database = require("../models")
-class PessoasServices extends Services {
+class ClientesServices extends Services {
     constructor(){
-        super('Pessoas')
-        this.matriculas = new Services('Matriculas');
+        super('Clientes')
     }
-    async pegaRegistrosAtivos(where = {}){
+    async findAll(where = {}){
         return database[this.nomeDoModelo].findAll({where: {...where}})
     }
     async pegaTodosOsRegistros(where = {}){
@@ -20,4 +19,4 @@ class PessoasServices extends Services {
     
 }
 
-module.exports = PessoasServices;
+module.exports = ClientesServices;

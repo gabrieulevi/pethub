@@ -18,8 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Cliente.init({
-    nome: DataTypes.STRING(255),  // Define o tamanho máximo do campo nome
-    ativo: DataTypes.BOOLEAN,
+    nome: DataTypes.STRING(255),
     email: {
       type: DataTypes.STRING,
       validate: {
@@ -39,15 +38,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Cliente',
-    paranoid: true,  // Habilita o uso de "soft deletes"
-    defaultScope: {
-      where: { ativo: true }
-    },
-    scopes: {
-      todos: {
-        where: {}
-      }
-    }
+    paranoid: true
   });
   return Cliente;
 };
