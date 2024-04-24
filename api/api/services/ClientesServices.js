@@ -10,10 +10,10 @@ class ClientesServices extends Services {
     async pegaTodosOsRegistros(where = {}){
         return database[this.nomeDoModelo].scope('todos').findAll({where: {...where}})
     }
-    async cancelaPessoaEMatriculas(estudanteId){
+    async cancelaClienteEPet(clienteId){
         database.sequelize.transaction(async transacao => {
-            await super.atualizaRegistro({ativo: false}, estudanteId, {transaction: transacao})
-            await this.matriculas.atualizaRegistro({statis: false}, { estudante_id: estudanteId }, {transaction: transacao})
+            await super.atualizaRegistro({ativo: false}, clienteId, {transaction: transacao})
+            await this.matriculas.atualizaRegistro({statis: false}, { estudante_id: clienteId }, {transaction: transacao})
         })
     }
     
